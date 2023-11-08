@@ -1,16 +1,24 @@
 import { defaultProject } from './defaultProject';
 
-// DOM FOR THE HEADING
-// export const initialDomPage = () => {
-//   const contentDiv = document.querySelector('.content');
-//   const heading = document.createElement('h1');
-//   heading.textContent = 'To-do-list app!';
-//   heading.style.textAlign = 'center';
-//   contentDiv.appendChild(heading);
+export const initialDomPage = () => {
+  const projectsInfoDiv = document.createElement('div');
+  projectsInfoDiv.textContent = defaultProject().projectTitle;
+  contentDiv.appendChild(projectsInfoDiv);
+};
 
-//   // DOM FOR THE DEFAULT PROJECT LOAD
-//   const projectsInfoDiv = document.createElement('div');
-//   projectsInfoDiv.textContent = defaultProject().projectTitle;
-//   projectsInfoDiv.style.marginTop = '100px';
-//   contentDiv.appendChild(projectsInfoDiv);
-// };
+export function addItemToCheckList() {
+  const addItem = document.getElementById('add-to-checklist').value;
+
+  // Check to see if the input is empty and button was clicked, if so
+  // return out of this function - do nothing
+  // if not, apply new content to new li in DOM
+
+  if (addItem !== '') {
+    const ul = document.querySelector('.todo-ul');
+    const li = document.createElement('li');
+    li.textContet = addItem;
+    const span = document.createElement('span');
+    span.classname = 'remove-checklist-item';
+    const removeIcon = document.createTextNode('\u00d7');
+  }
+}
