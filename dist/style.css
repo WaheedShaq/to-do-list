@@ -11,7 +11,7 @@ body {
 }
 
 .content {
-  border-style: groove;
+  /* border-style: groove; */
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 0.1fr;
@@ -33,15 +33,15 @@ h1 {
 }
 
 .form-heading {
-  border-style: groove;
+  /* border-style: groove; */
 }
 
 .form {
-  border-style: groove;
+  /* border-style: groove; */
 }
 
 .todos-heading {
-  border-style: groove;
+  /* border-style: groove; */
 }
 
 .projects {
@@ -71,7 +71,7 @@ h1 {
   margin-top: 40px;
   border-radius: 10px;
   padding: 5px;
-  box-shadow: 5px 5px 5px black;
+  /* box-shadow: 5px 5px 5px black; */
 }
 
 #add-todo {
@@ -101,6 +101,7 @@ li {
 .remove-checklist-item {
   justify-self: right;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 #add-to-checklist {
@@ -125,10 +126,10 @@ li {
   margin-top: 40px;
   border-radius: 10px;
   padding: 5px;
-  box-shadow: 5px 5px 5px black;
+  /* box-shadow: 5px 5px 5px black; */
   border-radius: 10px;
   padding: 5px;
-  box-shadow: 5px 5px 5px black;
+  /* box-shadow: 5px 5px 5px black; */
 }
 
 .add-to-checklist {
@@ -148,9 +149,9 @@ li {
   margin-top: 40px;
   border-radius: 10px;
   padding: 5px;
-  box-shadow: 5px 5px 5px black;
+  /* box-shadow: 5px 5px 5px black; */
   border-radius: 10px;
-  box-shadow: 5px 5px 5px black;
+  /* box-shadow: 5px 5px 5px black; */
 }
 
 .reset-button {

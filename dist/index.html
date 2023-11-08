@@ -10,15 +10,24 @@
   <body>
     <div class="content">
       <div class="form-heading">
-        <h1>Add New ToDo To Project</h1>
+        <h1>Add New To-Do To Project</h1>
       </div>
       <div class="todos-heading">
-        <h1>Current ToDos' In Projects'</h1>
+        <h1>Current To-Dos In Projects</h1>
       </div>
       <div class="form">
         <!-- <button class="add-todo-button">Add New ToDo</button> -->
         <div id="add-todo-form">
           <form id="add-todo">
+            <label for="Project">Project:</label>
+            <input
+              type="text"
+              id="Title"
+              name="Title"
+              placeholder="Required Field"
+              required
+            />
+
             <label for="Title">Title:</label>
             <input
               type="text"

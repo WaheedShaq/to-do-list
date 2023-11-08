@@ -16,9 +16,38 @@ export function addItemToCheckList() {
   if (addItem !== '') {
     const ul = document.querySelector('.todo-ul');
     const li = document.createElement('li');
-    li.textContet = addItem;
+    li.textContent = addItem;
     const span = document.createElement('span');
-    span.classname = 'remove-checklist-item';
+    span.className = 'remove-checklist-item';
+
+    // Creates an X icon
     const removeIcon = document.createTextNode('\u00d7');
+    li.appendChild(span);
+    span.appendChild(removeIcon);
+    ul.appendChild(li);
+    document.getElementById('add-to-checklist').value = '';
+
+    // DOM check for existing check list items already present
+    if (document.querySelectorAll('li').length > 0) {
+      const nodeListCheckList = document.querySelectorAll('li');
+
+      // DOM to bind click event to each node in nodelist and remove node if clicked
+      nodeListCheckList.forEach((checkListItem) => {
+        checkListItem.addEventListener(
+          'click',
+          function removeItemFromCheckList() {
+            checkListItem.remove();
+          }
+        );
+      });
+    }
+  } else return;
+}
+
+export function clearForm() {
+  const nodeListCheckList = document.querySelectorAll('li');
+  for (let i = 0; i < nodeListCheckList.length; i++) {
+    nodeListCheckList[i].remove();
   }
+  document.getElementById('add-todo').reset();
 }
