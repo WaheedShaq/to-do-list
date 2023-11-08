@@ -3,14 +3,20 @@ let toDoArray = [];
 
 // Factory function to create todo list
 
-export const createToDo = (title, description, dueDate, priority) => {
+export const createToDo = (
+  title,
+  description,
+  dueDate,
+  priority,
+  checkList
+) => {
   console.log('Called createToDo module..creating todo now');
-  console.log({ title, description, dueDate, priority });
+  console.log({ title, description, dueDate, priority, checkList });
   console.log('Pushing this object to toDoArray');
-  toDoArray.push({ title, description, dueDate, priority });
+  toDoArray.push({ title, description, dueDate, priority, checkList });
   console.log(
     'Showing the properties of the toDoArray after a push in create-to-do.js',
     toDoArray
   );
-  return { title, description, dueDate, priority };
+  return { title, description, dueDate, priority, checkList };
 };

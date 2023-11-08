@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Bigelow+Rules&family=Bubblegum+Sans&family=Carter+One&family=Kaushan+Script&family=Open+Sans:wght@300&family=Oswald:wght@200&family=Pixelify+Sans&family=Poppins:wght@100&family=Roboto&family=Rubik:wght@400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@1,300&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Agbalumo;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+  background-color: #87c4ff;
+  height: 100px;
+}
+
+.content {
+  width: 100%;
+}
+
+.form-folder {
+  margin-top: 100px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.form-header {
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 20%;
+}
+
+.form-item {
+  margin-top: 15px;
+  margin-right: 20px;
+  width: 300px;
+  padding: 10px;
+}
+
+.folder {
+  margin-left: 50px;
+  margin-top: 100px;
+  background-color: red;
+  width: 270px;
+  height: 150px;
+  padding-left: 90px;
+  padding-top: 20px;
+}
+
+.check-list-btn {
+  width: 200px;
+  margin-left: 50px;
+  height: 50px;
+  margin-top: 10px;
+}

@@ -6,22 +6,27 @@ import { createToDo } from './create-to-do';
 defaultProject();
 
 // Call initialDomPage module to control the DOM elements on the page
-initialDomPage();
+// initialDomPage();
 
 // Calling the createToDo module
 
 const myToDo = createToDo(
   'Study coding',
   'Finish the to-do-list project on TOP',
-  'Saturday the 11th ',
-  'Urgent'
+  ' 11/11/2023',
+  'Urgent',
+  'Practice webpack',
+  'Create modules'
 );
 
 const myToDo2 = createToDo(
   'Tidy my room',
   'Need to dedust my computer table, put away my clothes, and vacuum the floor',
-  'Today',
-  'Important'
+  '8/11/2023',
+  'Important',
+  'Meat',
+  'Eggs',
+  'Milk'
 );
 
 console.log('Show me the properties of the first toDo on index.js....', myToDo);
