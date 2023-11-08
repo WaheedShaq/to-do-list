@@ -1,5 +1,6 @@
 import { compareAsc, format, parseISO, startOfToday } from 'date-fns';
 import { clearForm } from './DOM-Stuff';
+import { saveDataToLocal } from './localStorage';
 
 // Testing out date-fns
 const result = startOfToday();
@@ -45,7 +46,7 @@ export const createToDo = () => {
     checkListArray.push(strippedCheckList);
   }
 
-  // Seperates the array with a commay, stringifying it essentially
+  // Seperates the array with a comma, stringifying it essentially
   let CheckList = checkListArray.join(', ');
 
   // Remove below two lines if not needed later
@@ -54,6 +55,9 @@ export const createToDo = () => {
 
   // Reset form after submission
   clearForm();
+
+  // Push data to local storage
+  saveDataToLocal({ Title, Description, DueDate, Priority, CheckList });
 
   return { Title, Description, DueDate, Priority, CheckList };
 };

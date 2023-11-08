@@ -44,10 +44,27 @@ export function addItemToCheckList() {
   } else return;
 }
 
+// Function to clear the form elements
 export function clearForm() {
   const nodeListCheckList = document.querySelectorAll('li');
   for (let i = 0; i < nodeListCheckList.length; i++) {
     nodeListCheckList[i].remove();
   }
   document.getElementById('add-todo').reset();
+}
+
+export function displayToDo() {
+  // Check and clear current display DOM
+  const removeDivs = document.querySelectorAll('.card');
+  console.log('Show me the count of the cards', removeDivs);
+  for (let i = 0; i < removeDivs.length; i++) {
+    removeDivs[i].remove();
+  }
+
+  // Create the display card for the display DOM
+  console.log('Displaying to screen');
+  const projects = document.querySelector('.projects');
+  const card = document.createElement('div');
+  card.classList.add('card');
+  projects.appendChild(card);
 }
