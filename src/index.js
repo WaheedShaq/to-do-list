@@ -17,31 +17,8 @@ let clickEventsModule = (function () {
   // Click event to clear the form
   const clearButton = document.querySelector('.reset-button');
   clearButton.addEventListener('click', clearForm);
+
+  // Click event to submit a new todo form to project
+  const submitButton = document.querySelector('.submit-button');
+  submitButton.addEventListener('click', createToDo);
 })();
-
-// Calling the createToDo module
-
-const myToDo = createToDo(
-  'Study coding',
-  'Finish the to-do-list project on TOP',
-  ' 11/11/2023',
-  'Urgent',
-  'Practice webpack',
-  'Create modules'
-);
-
-const myToDo2 = createToDo(
-  'Tidy my room',
-  'Need to dedust my computer table, put away my clothes, and vacuum the floor',
-  '8/11/2023',
-  'Important',
-  'Meat',
-  'Eggs',
-  'Milk'
-);
-
-console.log('Show me the properties of the first toDo on index.js....', myToDo);
-console.log(
-  'Show me the properties of the second toDo on index.js....',
-  myToDo2
-);
