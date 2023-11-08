@@ -8,46 +8,63 @@
     <title>To-do-list</title>
   </head>
   <body>
-    <h1 class="header">To-Do-List!</h1>
     <div class="content">
-      <h1 class="form-header">Add new To-Do!</h1>
-      <form class="form-folder">
-        <input
-          class="form-item"
-          type="text"
-          name="project-name"
-          placeholder="New Project"
-        />
-        <input class="form-item" type="text" name="title" placeholder="Title" />
-        <input
-          class="form-item"
-          type="text"
-          name="description"
-          placeholder="Description"
-        />
-        <input
-          class="form-item"
-          type="date"
-          name="date"
-          placeholder="mm/dd/yyy"
-        />
-        <select class="form-item">
-          <option value=" " selected>low</option>
-          <option>high</option>
-          <option>urgent</option>
-        </select>
-        <input
-          class="form-item"
-          type="text"
-          name="checklist"
-          placeholder="Type checklist item here"
-        />
-        <input
-          class="check-list-btn"
-          type="submit"
-          value="Add Item To Checklist"
-        />
-      </form>
+      <div class="form-heading">
+        <h1>Add New ToDo To Project</h1>
+      </div>
+      <div class="todos-heading">
+        <h1>Current ToDos' In Projects'</h1>
+      </div>
+      <div class="form">
+        <button class="add-todo-button">Add New ToDo</button>
+        <div id="add-todo-form">
+          <form id="add-todo">
+            <label for="Title">Title:</label>
+            <input
+              type="text"
+              id="Title"
+              name="Title"
+              placeholder="Required Field"
+              required
+            />
+            <label for="Description">Description:</label>
+            <input
+              type="text"
+              id="Description"
+              name="Description"
+              placeholder="Required Field"
+              required
+            />
+            <label for="DueDate">Due Date:</label>
+            <input
+              type="date"
+              id="DueDate"
+              name="DueDate"
+              placeholder="Required Field"
+              required
+            />
+            <label for="Priority">Priority:</label>
+            <select id="Priority" , name="Priority">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            <label for="CheckList">CheckList Items Added (if any):</label>
+            <ul class="todo-ul"></ul>
+          </form>
+          <input
+            type="text"
+            id="add-to-checklist"
+            name="add-to-checklist"
+            placeholder="Type checklist item here"
+          />
+          <button class="add-to-checklist">Add Item To Checklist</button>
+          <br />
+          <button type="submit" class="submit-button">Submit ToDo</button>
+          <button type="reset" class="reset-button">Reset Form</button>
+        </div>
+      </div>
+      <div class="projects"></div>
     </div>
 
     <script src="./main.js"></script>
