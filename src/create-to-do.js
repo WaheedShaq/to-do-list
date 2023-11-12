@@ -51,13 +51,13 @@ export const createToDo = () => {
 
   // Remove below two lines if not needed later
   toDoArray.push({ Title, Description, DueDate, Priority, CheckList });
-  console.log(toDoArray);
-
-  // Reset form after submission
-  clearForm();
+  console.log(`To do array is: ${toDoArray}`);
 
   // Push data to local storage
   saveDataToLocal({ Title, Description, DueDate, Priority, CheckList });
+
+  // Reset form after submission
+  clearForm();
 
   return { Title, Description, DueDate, Priority, CheckList };
 };

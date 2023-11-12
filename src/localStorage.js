@@ -1,5 +1,7 @@
 // Module to save data entered by the user to their local storage
 
+import { displayToDo } from './DOM-Stuff';
+
 export function saveDataToLocal({
   Title,
   Description,
@@ -16,5 +18,7 @@ export function saveDataToLocal({
   localStorage.setItem('DueDate', document.getElementById('DueDate').value);
   localStorage.setItem('Priority', document.getElementById('Priority').value);
   localStorage.setItem('CheckList', CheckList);
+
+  displayToDo();
   return { Title, Description, DueDate, Priority, CheckList };
 }

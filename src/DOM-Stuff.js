@@ -43,7 +43,6 @@ export function addItemToCheckList() {
     }
   } else return;
 }
-
 // Function to clear the form elements
 export function clearForm() {
   const nodeListCheckList = document.querySelectorAll('li');
@@ -60,11 +59,34 @@ export function displayToDo() {
   for (let i = 0; i < removeDivs.length; i++) {
     removeDivs[i].remove();
   }
-
   // Create the display card for the display DOM
   console.log('Displaying to screen');
   const projects = document.querySelector('.projects');
   const card = document.createElement('div');
   card.classList.add('card');
   projects.appendChild(card);
+
+  // Gather data from local backend storage and initialize
+  let Title = localStorage.getItem('Title');
+  console.log(`Local storage title is: ${Title}`);
+  let Description = localStorage.getItem('Description');
+  console.log(`Local storage description is: ${Description}`);
+  let DueDate = localStorage.getItem('DueDate');
+  console.log(`Local storage DueDate is: ${DueDate}`);
+  let Priority = localStorage.getItem('Priority');
+  console.log(`Local storage Priority is: ${Priority}`);
+  let CheckList = localStorage.getItem('CheckList');
+  console.log(`Local storage CheckList is: ${CheckList}`);
+
+  // Place data in local temp array and loop over key/value pairs and display to DOM
+  let displayArray = { Title, Description, DueDate, Priority, CheckList };
+  console.log(`Display array is : ${displayArray}`);
+
+  for (let key in displayArray) {
+    console.log(`${key}: ${displayArray[key]}`);
+    const para = document.createElement('p');
+    para.textContent = `${key}: ${displayArray[key]}`;
+    console.log(para);
+    card.appendChild(para);
+  }
 }
